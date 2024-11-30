@@ -7,7 +7,7 @@ load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 
-MONGO_URI = os.getenv("MONGODB_URI")
+MONGO_URI = os.getenv("MONGODB_URI") || "mongodb+srv://maihar:maihar@cluster0.pad3t.mongodb.net/?retryWrites=true&w=majority&appName=task";
 
 if not MONGO_URI:
     logging.error("MONGODB_URI environment variable is not set.")
